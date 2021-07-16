@@ -1,7 +1,7 @@
 #include <Wire.h>
 #include "HT_SH1107Wire.h"
 #include "HT_DisplayUi.h"
-#include "images.h"
+//#include "images.h"
 #include "softSerial.h"
 
 #define CONTROL_PIN 21   // This is the YELLOW wire, can be any data line
@@ -99,9 +99,9 @@ void setup() {
   // run it in 160Mhz mode or just set it to 30 fps
   ui.setTargetFPS(60);
 
-  // Customize the active and inactive symbol
-  ui.setActiveSymbol(activeSymbol);
-  ui.setInactiveSymbol(inactiveSymbol);
+//  // Customize the active and inactive symbol
+//  ui.setActiveSymbol(activeSymbol);
+//  ui.setInactiveSymbol(inactiveSymbol);
 
   // You can change this to
   // TOP, LEFT, BOTTOM, RIGHT
@@ -133,3 +133,5 @@ void loop() {
     // Don't do stuff if you are below your
     // time budget.
     delay(remainingTimeBudget);
+  }
+}
